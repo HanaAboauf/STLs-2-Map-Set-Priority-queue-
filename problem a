@@ -1,0 +1,22 @@
+#include <cmath>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    { ios_base::sync_with_stdio(false),cin.tie(nullptr),cout.tie(nullptr);}
+   string s;
+set<char>ss;
+    getline(cin,s);
+    for (int i = 1; i < s.size()-1; ++i) {
+        if (s[i]==','||s[i]==' ')continue;
+        else  ss.insert(s[i]);
+    }
+    
+  cout<<"\n"<<ss.size();
+    return 0;
+}
+
+
+
