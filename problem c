@@ -1,0 +1,31 @@
+#include "bits/stdc++.h"
+#include <algorithm>
+using namespace std;
+bool camp(pair<long long ,long long >a, pair<long long ,long long >b){
+    if (a.first<b.first)return true;
+    else if (a.first==b.first){
+        if (a.second>b.second)return true;
+    }
+    return false;
+}
+int main(){
+        ios_base::sync_with_stdio(false);
+
+       int t,n;
+       cin>>t;
+    for (int i = 0; i < t; ++i) {
+        cin>>n;
+        vector<pair<long long ,long long>>v(n);
+        for (int j = 0; j < n; ++j) {
+            cin>>v[j].first;
+            cin>>v[j].second;
+        }
+        std::sort(v.begin(), v.end(),camp);
+        for (auto it:v) {
+            cout<<it.first<<" "<<it.second<<"\n";
+
+        }
+    }
+
+        return 0;
+}
