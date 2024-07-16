@@ -1,0 +1,29 @@
+#include "bits/stdc++.h"
+#include <algorithm>
+using namespace std;
+int main(){
+        ios_base::sync_with_stdio(false);
+        int a,b,c,d,cnt;
+        cin>>a>>b>>c>>d;
+        cnt=a+b+c+d;
+    if (cnt%2==0){
+        if (a+b==c+d){
+            cout<<"YES";return 0;
+        }
+        if (a+c==b+d){
+            cout<<"YES";return 0;
+        }
+        if (a+d==b+c){
+            cout<<"YES";return 0;
+        }
+        if (a+c+b==d||a+b+d==c||a+c+d==b||b+c+d==a){
+            cout<<"YES";return 0;
+        }
+    }
+    
+    cout<<"NO";
+
+
+
+        return 0;
+}
